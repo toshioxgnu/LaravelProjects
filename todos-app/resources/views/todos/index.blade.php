@@ -1,14 +1,30 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Todos</title>
-	<link rel="stylesheet" href="">
-</head>
-<body>
-	<h1>
+@extends('layouts.app')
+
+
+@section('title')
+	Todos
+@endsection
+
+@section('content')
+		<h1 class="text-center">
 		Todos Page 
 	</h1>
-</body>
-</html>
+	
+	<div class="row justify-content-center">
+		<div class="col-md-8">
+			<div class="card card-default">
+		<div class="card-header">Todos</div>
+		<div class="card-body">
+			<ul class="list-group">
+		@foreach($todos as $todo)
+		<li class="list-group-item"> {{$todo -> name}} 
+			<a href="/todos/{{$todo->id}} "><button class="btn btn-primary btn-sm float-right">View </button></a>
+		</li>
+		
+		@endforeach
+	</ul>
+		</div>
+	</div>
+		</div>
+	</div>
+@endsection
