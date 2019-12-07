@@ -5,9 +5,7 @@
 	{{$todo->name}}
 @endsection
 
-@section('name')
-	<li class="breadcrumb-item active" aria-current="page"> {{$todo->name}} </li>
-@endsection
+
 
 @section('content')
 

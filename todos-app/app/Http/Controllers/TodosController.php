@@ -21,4 +21,12 @@ class TodosController extends Controller
    	
    	return view('todos.show')->with('todo', Todo::find($todoId));	
    }
+
+   public function create ( ){
+   	return view('todos.create');
+   }
+
+   public function store(){
+      dd(request()->all()); 
+   }
 }
