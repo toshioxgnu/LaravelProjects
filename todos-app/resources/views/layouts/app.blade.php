@@ -9,6 +9,7 @@
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/13f470fb4d.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -22,7 +23,7 @@
 	        <a class="nav-link" href="/todos">Todos<span class="sr-only">(current)</span></a>
 	      </li>
 	      <li class="nav-item active">
-	        <a class="nav-link" href="/new-todo">New</a>
+	        <a class="nav-link" href="/new-todo"><i class="fas fa-plus-square"></i></a>
 	      </li>
 
     	</ul>
@@ -32,6 +33,16 @@
    </nav>
 
 	<div class="container">
+		@if(session()->has('success'))
+			<div class="alert alert-success alert-dismissible">
+					{{ session() -> get('success') }} 
+			</div>	
+		@endif
+		@if(session()->has('danger'))
+			<div class="alert alert-danger alert-dismissible">
+					{{ session() -> get('danger') }} 
+			</div>	
+		@endif
 		@yield('content')
 	</div>
 

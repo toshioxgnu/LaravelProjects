@@ -22,8 +22,8 @@
 			<div class="card-body"> {{$todo->description}} </div>
 
 		</div>
-			<a href="/todos/{{ $todo->id }}/edit " class="btn btn-info my-5 btn-sm">Edit</a>
-			<a href="/todos/{{ $todo->id }}/delete " class="btn btn-danger my-5 btn-sm">Delete</a>
+			<a href="/todos/{{ $todo->id }}/edit " class="btn btn-info my-5 btn-sm"><i class="fas fa-edit"></i></a>
+			<a href="/todos/{{ $todo->id }}/delete " class="btn btn-danger my-5 btn-sm"><i class="fas fa-trash"></i></a>
 			</div>
 		</div>
 
